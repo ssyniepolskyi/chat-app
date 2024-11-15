@@ -1,0 +1,19 @@
+{
+  "name": "taf",
+  "version": "1.0.0",
+  "description": "This repository contains the automated test suite for a chat application using Cypress. The tests cover user authentication (login, registration, and logout), as well as chat functionality (sending messages, viewing message history). This project implements behavior-driven design (BDD) to ensure that each feature meets user requirements and performs as expected.",
+  "main": "index.js",
+  "scripts": {
+    "test": "cypress run",
+    "cypress:open": "cypress open"
+  },
+  "keywords": [],
+  "author": "ssyniepolskyi",
+  "license": "ISC",
+  "devDependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^21.0.3",
+    "@bahmutov/cypress-esbuild-preprocessor": "^2.2.3",
+    "@cucumber/cucumber": "^11.0.1",
+    "esbuild": "^0.24.0"
+  }
+}

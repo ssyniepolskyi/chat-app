@@ -1,7 +1,7 @@
 # Chat Application Testing Suite
 
 ## Overview
-This repository contains the automated test suite for a chat application using Cypress. The tests cover user authentication (login, registration, and logout), as well as chat functionality (sending messages, viewing message history). This project implements behavior-driven design (BDD) to ensure that each feature meets user requirements and performs as expected.
+This repository contains the automated test suite for a chat application using Cypress and Cucumber. The tests cover user authentication (login, registration, and logout), as well as chat functionality (sending messages, viewing message history). This project implements behavior-driven design (BDD) to ensure that each feature meets user requirements and performs as expected.
 
 ## Prerequisites
 
@@ -14,9 +14,9 @@ This repository contains the automated test suite for a chat application using C
 
 - **cypress/e2e/pages/**: Contains page object classes representing each page.
 - **cypress/e2e/tests/**: Contains test scripts.
-- **cypress/support/**: Contains custom configurations.
-- **cypress/utils/**: Contains additional test data.
-- **features/**: Contains BDD feature files.
+- **cypress/fixtures/**: Contains test data files.
+- **cypress/support/**: Contains custom commands and configurations.
+- **cypress/utils/**: Contains utility functions and additional test data.
 
 ## Setup Instructions
 
@@ -28,14 +28,12 @@ This repository contains the automated test suite for a chat application using C
 6. Run Tests
 - Run All Tests in Interactive Mode: `npm run cypress:open`
 - Run All Tests in Headless Mode: `npm test`
-- Run a specific test file in headless mode: `npx cypress run --spec "cypress/e2e/tests/auth.spec.js"`
+- Run a specific test file in headless mode: `npx cypress run --spec "cypress/e2e/features/chat/chat.feature"`
 - Run Tests in a Specific Browser: `npx cypress run --browser chrome`
 
 ## Writing Tests
-Tests are located in the cypress/e2e/tests/ directory.
+Tests are located in the cypress/e2e/features/**/ directories.
 Page Object Model (POM) are located in the cypress/e2e/pages/ to interact with the application.
-Test data is stored in cypress/utils/testData.js and cypress/fixtures/users.json.
-Import and use it in your tests and page objects.
 Configuration is defined in cypress.config.js.
 Screenshots are saved in cypress/screenshots/.
 Videos are saved in cypress/videos/.

@@ -1,0 +1,25 @@
+.error-message {
+  position: relative;
+  background-color: #f8d7da; /* Light red background */
+  color: #721c24; /* Dark red text */
+  padding: 12px 40px 12px 12px;
+  margin: 10px 0;
+  border: 1px solid #f5c6cb; /* Red border */
+  border-radius: 4px;
+}
+
+.error-message p {
+  margin: 0;
+}
+
+.error-message .close-button {
+  position: absolute;
+  top: 50%;
+  right: 12px;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: #721c24;
+  font-size: 20px;
+  cursor: pointer;
+}
