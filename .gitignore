@@ -1,0 +1,12 @@
+# Node artifact files
+node_modules/
+
+# JetBrains IDE
+.idea/
+
+# VS Code
+.vscode/
+
+# Package files
+*.jar
+package-lock.json
