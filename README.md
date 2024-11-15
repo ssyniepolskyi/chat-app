@@ -1,5 +1,11 @@
 # Chat App with Automated Testing
 
+## Prerequisites
+
+- **Node.js** (Version 18 or higher)
+- **npm** (Node Package Manager)
+- **Cypress** (Version 13 or higher)
+
 ## Project Structure
 
 - `server/` - Backend server (Node.js + Express).
