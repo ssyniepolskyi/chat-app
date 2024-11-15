@@ -10,3 +10,9 @@ node_modules/
 # Package files
 *.jar
 package-lock.json
+
+# Cypress test execution artifacts
+cypress/videos/
+cypress/screenshots/
+cypress/downloads/
+downloads/

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import ErrorMessage from './ErrorMessage';
 import axios from 'axios';
 import { Link, useNavigate } from 'react-router-dom';
 import '../styles/AuthContainer.css';
@@ -8,6 +9,7 @@ function Register() {
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
   const [error, setError] = useState('');
+  const clearError = () => setError('');
   const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
@@ -44,30 +46,29 @@ function Register() {
       <h2>Create an Account</h2>
       <form onSubmit={handleSubmit}>
         <input
+          data-test-id="username"
           type="text"
           placeholder="Username"
           value={username}
           onChange={(e) => setUsername(e.target.value)}
         />
         <input
+          data-test-id="password"
           type="password"
           placeholder="Password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
         <input
+          data-test-id="register-confirm-password"
           type="password"
           placeholder="Confirm Password"
           value={confirmPassword}
           onChange={(e) => setConfirmPassword(e.target.value)}
         />
-        <button type="submit">Register</button>
+        <button data-test-id="register-button" type="submit">Register</button>
       </form>
-      {error && (
-        <div className="error-message">
-          <p>{error}</p>
-        </div>
-      )}
+      {error && <ErrorMessage message={error} clearError={clearError} />}
       <p className="login-container__link">
         Have an account?
         &nbsp;<Link to="/login">Log in now</Link>
