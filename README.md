@@ -32,6 +32,9 @@
    - Here are two different frameworks built on different approaches - `/taf` and `/taf_bdd`
    - More information about running tests for different frameworks can be found in the `README.md` files located in `/taf` and `/taf_bdd`
 
-## Requirements
+## Technology stack
 
-- Node.js, MongoDB, React, Cypress
+- Node.js
+- MongoDB
+- React
+- Cypress
