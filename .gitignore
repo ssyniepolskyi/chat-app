@@ -12,7 +12,7 @@ node_modules/
 package-lock.json
 
 # Cypress test execution artifacts
-cypress/videos/
-cypress/screenshots/
-cypress/downloads/
+videos/
+screenshots/
+downloads/
 downloads/
